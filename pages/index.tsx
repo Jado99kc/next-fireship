@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import Loader from "@/components/Loader";
-
+import toast from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -25,6 +25,11 @@ export default function Home() {
 
         <div>
           <Loader show={true}></Loader>
+        </div>
+        <div>
+          <button onClick={() => toast.success("Hello Toast")}>
+            Toast Me!
+          </button>
         </div>
       </main>
     </>
