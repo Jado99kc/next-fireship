@@ -1,13 +1,12 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { User as FirebaseUser } from "firebase/auth";
-
+import { useContext } from "react";
+import { UserContext } from "@/lib/context";
 interface NavbarProps {}
 
 const Navbar: NextPage<NavbarProps> = ({}) => {
-  const user = {} as FirebaseUser;
-  const username = null;
+  const { user, username } = useContext(UserContext);
   return (
     <nav className="navbar">
       <ul>
