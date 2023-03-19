@@ -24,7 +24,12 @@ const Navbar: NextPage<NavbarProps> = ({}) => {
             </li>
             <li>
               <Link href={`/${username}`}>
-                <Image src={user?.photoURL || ""} alt=""></Image>
+                <Image
+                  src={user?.photoURL || ""}
+                  alt="profile picture"
+                  width={30}
+                  height={30}
+                ></Image>
               </Link>
             </li>
           </>
